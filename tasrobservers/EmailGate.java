@@ -10,6 +10,10 @@ public class EmailGate extends Observer {
     }
     @Override
     public void update() {
-        System.out.println("Emial gate");
+        System.out.println("Emial gate: "+ subject.getMessage());
+    }
+
+    public void remove(){
+        subject.remove(this);
     }
 }

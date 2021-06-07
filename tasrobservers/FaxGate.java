@@ -10,6 +10,10 @@ public class FaxGate extends Observer {
     }
     @Override
     public void update() {
-        System.out.println("Fax Gate");
+        System.out.println("Fax Gate: " + subject.getMessage());
+    }
+
+    public void remove(){
+        subject.remove(this);
     }
 }

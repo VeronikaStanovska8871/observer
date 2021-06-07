@@ -11,6 +11,10 @@ public class FbGate extends Observer {
     }
     @Override
     public void update() {
-        System.out.println("FB gate");
+        System.out.println("FB gate: "+ subject.getMessage());
+    }
+
+    public void remove(){
+        subject.remove(this);
     }
 }

@@ -11,6 +11,10 @@ public class SMSGate extends Observer {
 
     @Override
     public void update() {
-        System.out.println("SMS gate");
+        System.out.println("SMS gate: "+ subject.getMessage());
+    }
+
+    public void remove(){
+        subject.remove(this);
     }
 }
